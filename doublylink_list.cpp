@@ -7,7 +7,7 @@ int info;
 class doublylink_list *link,*previous_link;
 };
 int main(){
-    int no_of_node,node_count=1;
+    int no_of_node,node_count=1,location;
     cout<<"enter the number of element to form link list"<<endl;
     cin>>no_of_node;
 class doublylink_list *start_node,*current_node,*temporary_node;
@@ -43,7 +43,18 @@ temporary_node=start_node;
                     temporary_node=temporary_node->link;
 				}
 				}
+cout<<"hello";
 //to check either doubly link list is working or not...
+cout<<"enter the location to find its previous element";
+cin>>location;
+for(int i=0;i<=no_of_node;i++){
+    if(i==location){
+        temporary_node=temporary_node->previous_link;
+        cout<<"answer is..."<<temporary_node->info;
+    }
+    temporary_node=temporary_node->link;
+
+}
 
 
 }
